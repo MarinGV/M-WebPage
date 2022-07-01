@@ -1,0 +1,217 @@
+body{
+    background-color: #16151d;
+    color: #999999;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: 5% auto 5%;
+    grid-template-areas:
+    '. pic .'
+    '. stext .'
+    '. store .'
+    '. icons .'
+    '. footer .';
+    row-gap: 100px;
+    place-items: center;
+}
+
+.my-pic{
+    grid-area: pic; 
+    margin-top: 100px;
+}
+.my-text{
+    grid-area: stext;
+}
+
+.my-store{
+    grid-area: store;
+    box-shadow: 0 0px 3px green;
+    transition: 0.3s;
+}
+.my-store:hover {
+    box-shadow: 0px 0px 3px red;
+  }
+
+.container {
+    padding: 20px 0;
+    font-size: 130%;
+    text-align: center;
+    
+}
+.container:hover{
+    transform: scale(1.2);
+    transition: 0.6s;
+}
+
+.my-icons{
+    grid-area: icons;
+    display: grid;
+    grid-template-areas:
+    'ico1 ico2 ico3 ico4 ico5'
+    'ico6 ico7 ico8 ico9 ico10'
+    'ico11 ico12 ico13 ico14 ico15'
+    'ico16 ico17 ico18 ico19 ico20'
+    'ico21 ico21 ico21 ico21 ico21';
+    gap: 50px;
+    place-items: center;
+}
+
+.my-ico1{grid-area: ico1;}
+.my-ico2{grid-area: ico2;}
+.my-ico3{grid-area: ico3;}
+.my-ico4{grid-area: ico4;}
+.my-ico5{grid-area: ico5;}
+.my-ico6{grid-area: ico6;}
+.my-ico7{grid-area: ico7;}
+.my-ico8{grid-area: ico8;}
+.my-ico9{grid-area: ico9;}
+.my-ico10{grid-area: ico10;}
+.my-ico11{grid-area: ico11;}
+.my-ico12{grid-area: ico12;}
+.my-ico13{grid-area: ico13;}
+.my-ico14{grid-area: ico14;}
+.my-ico15{grid-area: ico15;}
+.my-ico16{grid-area: ico16;}
+.my-ico17{grid-area: ico17;}
+.my-ico18{grid-area: ico18;}
+.my-ico19{grid-area: ico19;}
+.my-ico20{grid-area: ico20;}
+.my-ico21{grid-area: ico21;}
+.my-ico22{grid-area: ico22;}
+
+
+.tilt-left{transform: rotate(20deg);}
+.tilt-right{transform: rotate(-20deg);}
+
+
+.my-footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-areas:
+    'Ico Name Phone '
+    'Ico Name Email '
+    'Ico Name Linkedin';
+    gap: 10px;
+    padding: 20px 0 10px 0;
+    background: #264c5e;
+    background: radial-gradient(circle, #264c5e 0%, #102131 66%);
+    box-shadow: 0px 0px 11px 0px #999999;
+
+}
+
+.my-ico{
+    grid-area: Ico;
+    place-self: center;
+    font-size: 120%;
+    padding-left: 10px;
+}
+.my-name{
+    grid-area: Name;
+    place-self: center;
+    font-size: 120%;
+    border-right: 1px solid;
+    padding: 25px 5px 25px 0;
+}
+.my-phone{grid-area: Phone;}
+.my-email{grid-area: Email; padding-right: 5px;}
+.my-lkin{grid-area: Linkedin;}
+
+.p-pic{
+    width: 150px;
+    border-radius: 50%;
+}
+
+.p-pic1{
+    width: 100px;
+}
+
+.p-pic2{
+    width: 200px;
+}
+
+.hi-line{
+    text-align: center;
+}
+
+.cont-txt{
+    text-align: justify;
+    font-size: 120%;
+}
+
+.text-ev, .text-ev>a{
+    color: aqua;
+    opacity: 0.7;
+}
+
+.my-gif{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.my-lkin>a{
+    color: #999999;
+}
+
+
+
+
+
+
+/* ----- Queries ----- */
+/* Do not move from the bottom of the document */
+
+/*media for phones*/
+@media (max-width: 759px){
+    .my-icons{
+        grid-template-areas:
+        'ico1 ico2'
+        'ico3 ico4'
+        'ico5 ico6'
+        'ico7 ico8'
+        'ico9 ico10'
+        'ico11 ico12'
+        'ico13 ico14'
+        'ico15 ico16'
+        'ico17 ico18'
+        'ico19 ico20'
+        'ico21 ico21';
+    }
+}
+
+/*media for tablets*/
+@media (min-width: 760px) and (max-width:1000px){
+    .my-icons{
+        grid-template-areas:
+        'ico1 ico2 ico3'
+        'ico4 ico5 ico6'
+        'ico7 ico8 ico9'
+        'ico10 ico11 ico12'
+        'ico13 ico14 ico15'
+        'ico16 ico17 ico18'
+        'ico19 ico20 ico21';
+    }
+}
+
+/*media for laptops*/
+@media (min-width: 1001px) and (max-width:1600px){
+    .main-container{grid-template-columns: 15% auto 15%;}
+    .my-icons{
+        grid-template-areas:
+        'ico1 ico2 ico3 ico4'
+        'ico5 ico6 ico7 ico8'
+        'ico9 ico10 ico11 ico12'
+        'ico13 ico14 ico15 ico16'
+        'ico17 ico18 ico19 ico20'
+        'ico21 ico21 ico21 ico21';
+    }
+    
+}
+
+/*media for desktops*/
+@media (min-width: 1601px){
+    .main-container{grid-template-columns: 25% auto 25%;}
+}
